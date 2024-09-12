@@ -1,0 +1,518 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#0f0e13;
+    background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+}
+
+/* Navbar Session */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.logo-container {
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.5;
+}
+
+.logo {
+    width: 180px; 
+    cursor: pointer;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    flex: initial;
+    margin-right: 150px;
+}
+
+.nav-item {
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 150px;  
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-button a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: #00ffff; /* Hover color */
+}
+
+.login-button {
+    background-color: #2952e3;
+    color: white;
+    padding: 8px 28px;
+    border-radius: 9999px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #2546bd;
+}
+
+/* Footer Session */
+.info_section {
+    color: #ffffff;
+    padding: 45px 0 15px 0;
+   
+}
+  
+.info_section h4 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+  
+.info_section .info_col {
+    margin-bottom: 30px;
+}
+  
+.info_section .info_contact .contact_link_box {
+    display: flex;
+    flex-direction: column;
+}
+  
+.info_section .info_contact .contact_link_box a {
+    margin: 5px 0;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+.info_section .info_contact .contact_link_box a i {
+    margin-right: 5px;
+}
+  
+.info_section .info_contact .contact_link_box a:hover {
+    color: #00ffff;
+}
+  
+  .info_section .info_social {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+  
+.info_section .info_social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 100%;
+    margin-right: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+  
+.info_section .info_social a:hover {
+    color: #00ffff;
+}
+  
+.info_section .info_detail p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+  
+.info_section .info_links {
+    display: flex;
+    flex-direction: column;
+}
+  
+.info_section .info_links a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+ 
+.info_section .info_links a:hover {
+    color: #00ffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Transaction Section */
+.wrapper {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.wallet-card{
+    margin-left: 70px;
+    
+}
+
+.card {
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    padding: 100px 200px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+.card-logo {
+    position: absolute;
+    height: 50px; /* Adjust size as needed */
+    top: 15px;
+    left: 20px;
+}
+
+.info-icon {
+    top: 15px;
+    right: 30px;
+    position: absolute;
+    font-size: 2em;
+}
+
+.card-body {
+    text-align: left;
+    position: absolute;
+    bottom: 5px;
+    left: 15px;  
+}
+
+.Amount{
+    position: absolute;
+    right: 185px;
+    bottom:90px;
+
+}
+
+.card-body p{
+    font-size: x-small;
+}
+
+.transaction-form {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.75);
+    flex: 0.70;
+    color:white;
+    border-radius: 10px;
+}
+
+.transaction-form h2 {
+    margin-bottom: 20px;
+}
+
+.transaction-form form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.transaction-form label {
+    margin: 10px 0 5px;
+}
+
+.transaction-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.transaction-form button:hover {
+    background-color: #2980b9;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 15px;
+    padding-left: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+  .input-group i{
+    visibility: hidden;
+    position: absolute;
+    top:50px;
+    right: 10px;
+  }
+
+  .input-group small{
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+
+  .input-group.success input{
+    border-color: #2ecc71;
+  }
+
+  .input-group.error input{
+    border-color: #e74c3c;
+  }
+  
+  .input-group.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+  }
+
+  .input-group.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+  }
+
+  .input-group.error small{
+    color: #e74c3c;
+    visibility: visible;
+  }
+
+
+/* History Session */
+.transaction-table {
+    color: white;
+    margin-top: 20px;
+    padding: 2rem;
+}
+
+.table-container {
+    color: white;
+    width: 95%; /* Adjust the width as needed to make the table smaller */
+    margin: 0 auto; /* Center the table */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    /* background: rgba(113,99,186,255); */
+    color: #fff;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+tbody {
+    background: none; /* Remove background color */
+}
+
+td {
+    padding: 15px;
+    font-size: 14px;
+    color: white;
+    border-bottom: 1px solid #ddd; /* Add border to separate rows */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Ensures content that overflows is hidden */
+    max-width: 200px; /* Set a maximum width for the cells */
+    text-overflow: ellipsis; /* Adds ellipsis (...) to indicate truncated text */
+}
+
+td.block-hash {
+    max-width: 250px; /* Adjust the max-width as needed for block hash */
+}
+
+tr:nth-child(even) {
+    background: none; /* Remove background color */
+}
+
+tfoot {
+    background: rgba(113,99,186,255);
+    font-weight: bold;
+    color: #fff;
+}
+
+tfoot td {
+    padding: 15px;
+    border-top: 2px solid #ddd;
+}
+
+/* setting */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto; 
+  }
+  
+  .login-form {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    text-align: left;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 15px;
+    padding-left: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+  .input-group i{
+    visibility: hidden;
+    position: absolute;
+    top: 45px;
+    right: 10px;
+  }
+
+  .input-group small{
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+
+  .input-group.success input{
+    border-color: #2ecc71;
+  }
+
+  .input-group.error input{
+    border-color: #e74c3c;
+  }
+  
+  .input-group.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+  }
+
+  .input-group.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+  }
+
+  .input-group.error small{
+    color: #e74c3c;
+    visibility: visible;
+  }
+
+  .login-status{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    visibility: hidden;
+  }
+
+  .login-status.error {
+    background-color: #af4242;
+    visibility: visible;
+    color: red;
+  }
+
+  .login-status.success{
+    background-color: #d2ffd2;
+    visibility: visible;
+    color: green;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 15px;
+    background: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: #f6121d;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }

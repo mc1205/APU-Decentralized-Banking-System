@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/Images/Company_Logo.png" type="" />
+
+    <title>DecentraBank | Decentralized Banking System</title>
+    <link href="/css/customer.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/styles.css" rel="stylesheet" type="text/css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="/script/customer.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="customer.html">
+          <img src="/Images/Homepage_Logo.png" alt="logo" class="logo" />
+        </a>
+      </div>
+      <ul class="nav-items">
+        <li class="nav-item">
+          <a href="customer.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a href="account.html">Account</a>
+        </li>
+        <li class="nav-item">
+          <a href="topup.html">Top Up</a>
+        </li>
+        <li class="nav-item">
+          <a href="setting.html">Setting</a>
+        </li>
+        <li class="login-button">
+          <a id="logout-button">Log Out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="wrapper">
+      <div class="main-content">
+        <div class="wallet-card">
+          <div class="card">
+            <img
+              src="/Images/walleticon.png"
+              alt="Decentra Bank Logo"
+              class="card-logo"
+            />
+            <span class="info-icon">ℹ️</span>
+            <span class="Amount" id="account-balance">RM </span>
+            <div class="card-body">
+              <p id="account-username">Username : </p>
+              <p id="account-walletID">Wallet ID : </p>
+            </div>
+          </div>
+        </div>
+        <div class="transaction-form">
+          <h2>Online Transfer</h2>
+          <form id="transaction-form">
+            <span class="login-status">Login Status</span>
+            <div class="input-group">
+                <label for="address">Address To</label>
+                <input type="text" id="address" name="address"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>    
+            <div class="input-group">
+                <label for="amount">Amount (RM)</label>
+                <input type="text" id="amount" name="amount" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="input-group">
+                <label for="secret">Secret Key</label>
+                <input type="password" id="secret" name="secret" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="input-group">
+                <label for="message">Enter Message</label>
+                <input type="text" id="message" name="message"></input>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            
+            
+            <button type="submit">Send now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="latest-transactions-table" class="transaction-table">
+      <div class="table-container">
+          <h3 class="main-title">Latest Blockchain Transaction</h3>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Wallet-ID (From)</th>
+                      <th>Wallet-ID (To)</th>
+                      <th>Amount (RM)</th>
+                      <th>Block Hash Value</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>2023-05-01</td>
+                      <td>Wallet-ID -xxxxxxxxxxxxxxxxxxxxx</td>
+                      <td>Wallet-ID -xxxxxxxxxxxxxxxxxxxxx</td>
+                      <td>$1000</td>
+                      <td class="block-hash">0000usuuwiidjn12345cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</td>
+                  </tr>
+                  <tr>
+                      <td>2023-05-01</td>
+                      <td>Wallet-ID -xxxxxxxxxxxxxxxxxxxxx</td>
+                      <td>Wallet-ID -xxxxxxxxxxxxxxxxxxxxx</td>
+                      <td>$1000</td>
+                      <td class="block-hash">0000usuuwiidjn12345cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </section>
+
+  <section id="account-history-table" class="transaction-table">
+      <div class="table-container">
+          <h3 class="main-title">History Transaction</h3>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Wallet-ID (From)</th>
+                      <th>Wallet-ID (To)</th>
+                      <th>Amount (RM)</th>
+                      <th>Description</th>
+                      <th>Status</th>
+                      <th>Block Hash Value</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>2023-05-01</td>
+                      <td>Wallet-ID -xxxxxxxxxxxxxxxxxxxxx</td>
+                      <td>Wallet-ID -xxxxxxxxxxxxxxxxxxxxx</td>
+                      <td>$1000</td>
+                      <td class="block-hash">I am really want to loan from you, So Please Loan to me , I am really Need the loan</td>
+                      <td>Pending</td>
+                      <td class="block-hash">0000usuuwiidjn12345cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</td>
+                  </tr>
+                  <tr>
+                      <td>2023-05-01</td>
+                      <td>Wallet-ID -xxxxxxxxxxxxxxxxxxxxx</td>
+                      <td>Wallet-ID -xxxxxxxxxxxxxxxxxxxxx</td>
+                      <td>$1000</td>
+                      <td class="block-hash">Loan</td>
+                      <td>Approve</td>
+                      <td class="block-hash">0000usuuwiidjn12345cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </section>
+
+    <section class="info_section layout_padding2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 info_col">
+              <div class="info_contact">
+                <h4>Address</h4>
+                <div class="contact_link_box">
+                  <a href="">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    <span
+                      >50, Jalan Seri Kembangan 5/17, <br />
+                      Seri Kembangan, 81100 Kuala Lumpur, <br />
+                      Malaysia.</span
+                    >
+                  </a>
+                  <a href="#">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span>Call +60 1234567890</span>
+                  </a>
+                  <a href="#">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span>decentrabank@gmail.com</span>
+                  </a>
+                </div>
+              </div>
+              <div class="info_social">
+                <a href="#">
+                  <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 info_col">
+              <div class="info_detail">
+                <h4>Info</h4>
+                <p>
+                  DecentraBank offers secure and transparent decentralized banking
+                  solutions <br />using advanced blockchain technology and
+                  cybersecurity measures. We ensure <br />the safety of your
+                  digital assets and provide exceptional support for all
+                  <br />your banking needs. Join us to experience a seamless and
+                  secure banking future.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </body>
+</html>
